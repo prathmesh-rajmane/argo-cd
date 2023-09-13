@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    move2kube.konveyor.io/service: pythontest
+  name: pythontest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      move2kube.konveyor.io/service: pythontest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        move2kube.konveyor.io/service: pythontest
+      name: pythontest
+    spec:
+      containers:
+        - image: quay.io/prathmesh7/pythontest:latest
+          imagePullPolicy: Always
+          name: pythontest
+          ports:
+            - containerPort: 8080
+          resources: {}
+      imagePullSecrets:
+        - name: quay-io-imagepullsecret
+      restartPolicy: Always
+      securityContext: {}
+status: {}

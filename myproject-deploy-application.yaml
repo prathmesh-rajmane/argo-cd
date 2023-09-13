@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: ""
   source:
-    path: '<TODO: fill in the path to the folder containing the K8s yamls>'
-    repoURL: '<TODO: fill in the git/helm repo url>'
+    path: 'yamls/'
+    repoURL: 'https://github.com/prathmesh-rajmane/argo-cd.git'
 status:
   health: {}
   summary: {}

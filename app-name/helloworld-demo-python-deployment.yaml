@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    move2kube.konveyor.io/service: helloworld-demo-python
+  name: helloworld-demo-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      move2kube.konveyor.io/service: helloworld-demo-python
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        move2kube.konveyor.io/service: helloworld-demo-python
+      name: helloworld-demo-python
+    spec:
+      containers:
+        - image: quay.io/prathmesh7/helloworld-demo-python:latest
+          imagePullPolicy: Always
+          name: helloworld-demo-python
+          ports:
+            - containerPort: 8080
+          resources: {}
+      imagePullSecrets:
+        - name: quay-io-imagepullsecret
+      restartPolicy: Always
+      securityContext: {}
+status: {}

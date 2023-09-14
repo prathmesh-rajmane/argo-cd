@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: ""
   source:
-    path: 'yamls/'
+    path: 'app-name/'
     repoURL: 'https://github.com/prathmesh-rajmane/argo-cd.git'
 status:
   health: {}

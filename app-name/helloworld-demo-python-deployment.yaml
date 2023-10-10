@@ -19,7 +19,7 @@ spec:
       name: helloworld-demo-python
     spec:
       containers:
-        - image: quay.io/prathmesh7/helloworld-demo-python:latest
+        - image: quay.io/prathmesh7/pythontest:1.0.2
           imagePullPolicy: Always
           name: helloworld-demo-python
           ports:

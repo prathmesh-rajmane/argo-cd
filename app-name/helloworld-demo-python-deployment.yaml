@@ -23,7 +23,7 @@ spec:
           imagePullPolicy: Always
           name: helloworld-demo-python
           ports:
-            - containerPort: 8080
+            - containerPort: 8085
           resources: {}
       imagePullSecrets:
         - name: quay-io-imagepullsecret
